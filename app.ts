@@ -28,8 +28,10 @@
 // person.role = Role.Admin
 
 // console.log(person.role)
+(function(){
+type inputData = number | string;
 
-const combine = function(a: number|string, b: number|string) {
+const combine = function(a: inputData, b: inputData) {
     if (typeof a === 'number' && typeof b === 'number'){
         return a+b;
     }
@@ -38,3 +40,4 @@ const combine = function(a: number|string, b: number|string) {
 
 console.log(combine(3,4))
 console.log(combine('3',4))
+})()

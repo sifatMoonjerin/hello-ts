@@ -22,11 +22,13 @@
 // }
 // person.role = Role.Admin
 // console.log(person.role)
-var combine = function (a, b) {
-    if (typeof a === 'number' && typeof b === 'number') {
-        return a + b;
-    }
-    return a.toString() + b.toString();
-};
-console.log(combine(3, 4));
-console.log(combine('3', 4));
+(function () {
+    var combine = function (a, b) {
+        if (typeof a === 'number' && typeof b === 'number') {
+            return a + b;
+        }
+        return a.toString() + b.toString();
+    };
+    console.log(combine(3, 4));
+    console.log(combine('3', 4));
+})();
