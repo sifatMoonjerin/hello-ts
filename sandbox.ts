@@ -1,9 +1,9 @@
-const character = "simba";
-console.log(character);
+const userName: string = "Sifat";
+const age: number = 25;
+const isMarried: boolean = false;
 
-const inputs = document.querySelectorAll("input");
-console.log(inputs);
+const sayHello: (name: string) => void = (name) => {
+  console.log(`Hello, ${name}`);
+};
 
-inputs.forEach((input) => {
-  console.log(input);
-});
+sayHello(userName);

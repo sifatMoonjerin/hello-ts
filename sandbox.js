@@ -1,7 +1,7 @@
-var character = "simba";
-console.log(character);
-var inputs = document.querySelectorAll("input");
-console.log(inputs);
-inputs.forEach(function (input) {
-    console.log(input);
-});
+var userName = "Sifat";
+var age = 25;
+var isMarried = false;
+var sayHello = function (name) {
+    console.log("Hello, " + name);
+};
+sayHello(userName);
