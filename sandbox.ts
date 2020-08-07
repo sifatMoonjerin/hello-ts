@@ -11,9 +11,15 @@ const sayHello: (name: string) => void = (name) => {
 sayHello(userName);
 
 // union types
-const uid: (string|number)[] = [];
-let answer: (string|number);
+const uid: (string | number)[] = [];
+let answer: string | number;
 
-answer = 'ok'
-answer = 234
+answer = "ok";
+answer = 234;
 
+
+// object 
+
+let something: {name:string}
+something = {name: 'sifat'}
+console.log(something)
