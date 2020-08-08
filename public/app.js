@@ -11,12 +11,14 @@ var Invoice = /** @class */ (function () {
     };
     return Invoice;
 }());
-var invOne = new Invoice("mario", "phone", 500);
+var invOne = new Invoice("mario", "phone", 5000);
 var invTwo = new Invoice("goku", "bean", 1000);
 var invoices = [];
 invoices.push(invOne);
 invoices.push(invTwo);
-console.log(invoices);
+invoices.forEach(function (inv) {
+    console.log(inv.client, inv.amount, inv.format());
+});
 // const anchor = document.querySelector('a') as HTMLAnchorElement;
 // console.log(anchor.href)
 var form = document.querySelector("form");
