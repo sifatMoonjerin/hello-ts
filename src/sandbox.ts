@@ -23,3 +23,14 @@ answer = 234;
 let something: {name:string}
 something = {name: 'sifat'}
 console.log(something)
+
+
+// functions
+
+const minus = (a: number, b: number, c: number = 0): string => {
+  console.log(a-b)
+  return c.toString()
+}
+
+let res: string = minus(7,5);
+console.log(res)

@@ -16,3 +16,11 @@ answer = 234;
 var something;
 something = { name: 'sifat' };
 console.log(something);
+// functions
+var minus = function (a, b, c) {
+    if (c === void 0) { c = 0; }
+    console.log(a - b);
+    return c.toString();
+};
+var res = minus(7, 5);
+console.log(res);
