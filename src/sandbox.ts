@@ -34,3 +34,10 @@ const minus = (a: number, b: number, c: number = 0): string => {
 
 let res: string = minus(7,5);
 console.log(res)
+
+// type aliases
+
+type strOrNum = string | number;
+
+let anything: strOrNum = 'adfd'
+anything = 3
