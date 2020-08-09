@@ -17,7 +17,7 @@ form.addEventListener("submit", (event: Event): void => {
   event.preventDefault();
 
   let doc: HasFormatter;
-  
+
   if (type.value === "invoice") {
     doc = new Invoice(tofrom.value, details.value, amount.valueAsNumber);
   } else {
@@ -26,3 +26,29 @@ form.addEventListener("submit", (event: Event): void => {
 
   list.render(doc, type.value, "end");
 });
+
+
+// Generics
+
+const addUID = <T extends object>(obj: T) => {
+  const uid = Math.floor(Math.random() * 100)
+  return {...obj, uid}
+}
+
+const person = addUID({name: 'sifat', age: 25})
+
+console.log(person.name)
+
+interface Resources<S,T>{
+  uid: number;
+  title: S;
+  data: T;
+}
+
+const obj: Resources<string,{name: string}> = {
+  uid: 4,
+  title: 'book',
+  data: {
+    name: 'hello'
+  }
+}
