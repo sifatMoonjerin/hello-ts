@@ -39,16 +39,27 @@ const person = addUID({name: 'sifat', age: 25})
 
 console.log(person.name)
 
-interface Resources<S,T>{
+
+// Enums
+
+enum ResourceType {BOOK, CD, RADIO}
+
+interface Resources<T>{
   uid: number;
-  title: S;
+  type: ResourceType;
   data: T;
 }
 
-const obj: Resources<string,{name: string}> = {
+const docOne: Resources<{name: string}> = {
   uid: 4,
-  title: 'book',
+  type: ResourceType.BOOK,
   data: {
     name: 'hello'
   }
+}
+
+const docTwo: Resources<string> = {
+  uid: 4,
+  type: ResourceType.RADIO,
+  data: 'news'
 }

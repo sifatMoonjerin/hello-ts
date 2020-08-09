@@ -26,10 +26,22 @@ const addUID = (obj) => {
 };
 const person = addUID({ name: 'sifat', age: 25 });
 console.log(person.name);
-const obj = {
+// Enums
+var ResourceType;
+(function (ResourceType) {
+    ResourceType[ResourceType["BOOK"] = 0] = "BOOK";
+    ResourceType[ResourceType["CD"] = 1] = "CD";
+    ResourceType[ResourceType["RADIO"] = 2] = "RADIO";
+})(ResourceType || (ResourceType = {}));
+const docOne = {
     uid: 4,
-    title: 'book',
+    type: ResourceType.BOOK,
     data: {
         name: 'hello'
     }
+};
+const docTwo = {
+    uid: 4,
+    type: ResourceType.RADIO,
+    data: 'news'
 };
